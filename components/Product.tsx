@@ -1,11 +1,15 @@
-const Product = () => {
+import Image from "./Image"
+
+interface ProductProps {
+  product: Product
+}
+
+const Product = ({ product }) => {
   return (
     <div className="bg-gray-100 p-4 border-2 min-w-min m max-w-max rounded-xl">
-      <img
-        className="flex w-auto"
-        src="https://cdn.shopify.com/s/files/1/1129/0442/products/Jetty-Reserve-BlueRiver-354x480_BlueRiver_medium.png?v=1566929292"
-        alt="image"
-      />
+      <div className="rounded-t-lg pt-2 pb-2 w-1/2 mx-auto">
+        <Image media={product.image} />
+      </div>
       <div className="flex items-center text-sm font-medium my-2 sm:mt-2 sm:mb-2">
         <div className="flex justify-center align-middle items-center gap-2">
           <div className="flex flex-col sm:flex-row items-center gap-1">
@@ -29,22 +33,19 @@ const Product = () => {
       </div>
       <div className="grid items-center sm:mt-1 sm:mb-4">
         <div className="text-sm sm:text-md md:text-lg font-semibold">
-          Reserve African Queen
+          {product.title} sticker
         </div>
         <div className="text-xs sm:text-base text-purple-500">
           · by Jetty Extracts
         </div>
       </div>
       <div className="flex items-center justify-center mt-3 gap-2">
-        <button
-          type="button"
-          className="bg-purple-100 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-5 md:px-8 py-2 rounded-full"
-        >
+        <button className="snipcart-add-item bg-purple-200 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-5 py-2 rounded-full">
           🛒1
         </button>
         <button
           type="button"
-          className="bg-blue-100 text-purple-700 text-sm sm:text-base font-bold px-4 sm:px-6 md:px-8 py-2 rounded-full"
+          className="bg-blue-200 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-4 py-2 rounded-full"
         >
           Comprar
         </button>

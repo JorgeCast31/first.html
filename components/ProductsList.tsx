@@ -1,5 +1,6 @@
 import NextImage from "./Image"
 import Link from "next/link"
+import { getStrapiMedia } from "../utils/medias"
 
 const ProductsList = ({ products }) => {
   return (
@@ -45,10 +46,7 @@ const ProductsList = ({ products }) => {
                   </div>
                 </div>
                 <div className="flex items-center justify-center mt-3 gap-2">
-                  <button
-                    type="button"
-                    className="bg-purple-200 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-5 py-2 rounded-full"
-                  >
+                  <button className="snipcart-add-item bg-purple-200 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-5 py-2 rounded-full">
                     🛒1
                   </button>
                   <button

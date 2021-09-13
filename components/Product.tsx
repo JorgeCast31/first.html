@@ -1,0 +1,56 @@
+const Product = () => {
+  return (
+    <div className="bg-gray-100 p-4 border-2 min-w-min m max-w-max rounded-xl">
+      <img
+        className="flex w-auto"
+        src="https://cdn.shopify.com/s/files/1/1129/0442/products/Jetty-Reserve-BlueRiver-354x480_BlueRiver_medium.png?v=1566929292"
+        alt="image"
+      />
+      <div className="flex items-center text-sm font-medium my-2 sm:mt-2 sm:mb-2">
+        <div className="flex justify-center align-middle items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-center gap-1">
+            <svg
+              width="20"
+              height="20"
+              fill="currentColor"
+              className="text-purple-600"
+            >
+              <path d="M9.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118l-2.8-2.034c-.784-.57-.381-1.81.587-1.81H7.03a1 1 0 00.95-.69L9.05 3.69z" />
+            </svg>
+            <span className="text-black">4.94</span>
+          </div>
+          <div className=" text-center text-xs sm:text-sm  bg-green-300 py-0.5 px-2 rounded-full">
+            <span className="text-green-900">THC 78.2%</span>
+          </div>
+          <div className=" text-center text-xs sm:text-sm bg-purple-300 py-0.5 px-2 rounded-full">
+            <span className="text-purple-900">CBD 0.2%</span>
+          </div>
+        </div>
+      </div>
+      <div className="grid items-center sm:mt-1 sm:mb-4">
+        <div className="text-sm sm:text-md md:text-lg font-semibold">
+          Reserve African Queen
+        </div>
+        <div className="text-xs sm:text-base text-purple-500">
+          · by Jetty Extracts
+        </div>
+      </div>
+      <div className="flex items-center justify-center mt-3 gap-2">
+        <button
+          type="button"
+          className="bg-purple-100 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-5 md:px-8 py-2 rounded-full"
+        >
+          🛒1
+        </button>
+        <button
+          type="button"
+          className="bg-blue-100 text-purple-700 text-sm sm:text-base font-bold px-4 sm:px-6 md:px-8 py-2 rounded-full"
+        >
+          Comprar
+        </button>
+      </div>
+    </div>
+  )
+}
+
+export default Product

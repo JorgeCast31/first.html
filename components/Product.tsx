@@ -1,14 +1,17 @@
 import Image from "./Image"
 
 interface ProductProps {
-  product: Product
+  product: {
+    image: string
+    title: string
+  }
 }
 
-const Product = ({ product }) => {
+const Product = ({ product }: ProductProps) => {
   return (
     <div className="bg-gray-100 p-4 border-2 min-w-min m max-w-max rounded-xl">
       <div className="rounded-t-lg pt-2 pb-2 w-1/2 mx-auto">
-        <Image media={product.image} />
+        <Image media={product.image} alt={product.title} />
       </div>
       <div className="flex items-center text-sm font-medium my-2 sm:mt-2 sm:mb-2">
         <div className="flex justify-center align-middle items-center gap-2">

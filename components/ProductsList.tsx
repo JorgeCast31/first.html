@@ -51,7 +51,7 @@ const ProductsList = ({ products }) => {
                   </button>
                   <button
                     type="button"
-                    className="bg-blue-200 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-4 py-2 rounded-full"
+                    className="bg-blue-200 text-purple-700 text-sm sm:text-base font-bold px-3 sm:px-6 py-2 rounded-full"
                   >
                     Comprar
                   </button>

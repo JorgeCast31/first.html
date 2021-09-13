@@ -3,18 +3,25 @@ import { useRouter } from "next/router"
 import ProductsList from "../../components/ProductsList"
 import { getCategories, getCategory } from "../../utils/api"
 
-const CategoryPage = ({ category }) => {
+interface Category {
+  id: number
+  name: string
+  slug: string
+  products: object[]
+}
+
+const CategoryPage = (props: Category) => {
   const router = useRouter()
   if (router.isFallback) {
-    return <div>Loading category...</div>
+    return <div></div>
   }
 
   return (
     <div>
       <Head>
-        <title>{category.name} products</title>
+        <title>{props.name} products</title>
       </Head>
-      <ProductsList products={category.products} />
+      <ProductsList products={props.products} />
     </div>
   )
 }

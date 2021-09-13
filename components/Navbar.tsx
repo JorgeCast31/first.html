@@ -1,6 +1,10 @@
 import Link from "next/link"
 import NextImage from "./Image"
 
+interface NavbarProps {
+  children: React.ReactNode
+}
+
 const Navbar = () => {
   return (
     <div className="flex justify-between ml-6 mr-6 mt-4">

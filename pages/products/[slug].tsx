@@ -1,6 +1,6 @@
+/* eslint-disable prettier/prettier */
 import Head from "next/head"
 import { useRouter } from "next/router"
-
 import NextImage from "../../components/Image"
 import { getProducts, getProduct } from "../../utils/api"
 import { getStrapiMedia } from "../../utils/medias"

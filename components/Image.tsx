@@ -1,4 +1,3 @@
-import { getStrapiMedia } from "../utils/medias"
 import NextImage from "next/image"
 
 const Image = (props) => {
@@ -8,13 +7,8 @@ const Image = (props) => {
 
   const { url, alternativeText } = props.media
 
-  const loader = ({ src }) => {
-    return getStrapiMedia(src)
-  }
-
   return (
     <NextImage
-      loader={loader}
       layout="responsive"
       objectFit="contain"
       width={props.media.width}

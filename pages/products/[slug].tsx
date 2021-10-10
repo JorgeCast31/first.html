@@ -2,8 +2,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 import NextImage from "../../components/Image"
-import { getProducts, getProduct } from "../../utils/api"
-import { getStrapiMedia } from "../../utils/medias"
 
 const ProductPage = ({ product }) => {
   const router = useRouter()
@@ -34,9 +32,6 @@ const ProductPage = ({ product }) => {
             data-item-price={product.price}
             data-item-url={router.asPath}
             data-item-description={product.description}
-            data-item-image={getStrapiMedia(
-              product.image.formats.thumbnail.url
-            )}
             data-item-name={product.title}
             v-bind="customFields"
           >
@@ -64,7 +59,7 @@ const ProductPage = ({ product }) => {
 
 export default ProductPage
 
-export async function getStaticProps({ params }) {
+/* export async function getStaticProps({ params }) {
   const product = await getProduct(params.slug)
   return { props: { product } }
 }
@@ -80,3 +75,4 @@ export async function getStaticPaths() {
     fallback: true,
   }
 }
+ */

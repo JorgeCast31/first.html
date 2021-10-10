@@ -1,6 +1,5 @@
 import NextImage from "./Image"
 import Link from "next/link"
-import { getStrapiMedia } from "../utils/medias"
 
 const ProductsList = ({ products }) => {
   return (

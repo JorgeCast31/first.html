@@ -1,11 +1,7 @@
 import Link from "next/link"
 import NextImage from "./Image"
 
-interface NavbarProps {
-  children: React.ReactNode
-}
-
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <div className="flex justify-between ml-6 mr-6 mt-4">
       <Link href="/">
@@ -19,9 +15,9 @@ const Navbar = () => {
           />
         </a>
       </Link>
-      <button className="snipcart-checkout flex items-center">
+      <button className="flex items-center">
         <NextImage height="150" width="150" src="/cart.svg" alt="Cart" />
-        <span className="snipcart-total-price ml-3 font-semibold text-sm text-indigo-500 bg-indigo-200 p-2 rounded-full"></span>
+        <span className="ml-3 font-semibold text-sm text-indigo-500 bg-indigo-200 p-2 rounded-full"></span>
       </button>
     </div>
   )
